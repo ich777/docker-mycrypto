@@ -20,7 +20,7 @@ docker run --name MyCrypto -d \
 	--env 'GID=100' \
 	--env 'UMASK=000' \
 	--env 'DATA_PERM=770' \
-    --env 'TURBOVNC_PARAMS=-securitytypes none' \
+	--env 'TURBOVNC_PARAMS=-securitytypes none' \
 	--volume /path/to/mycrypto:/mycrypto \
 	--restart=unless-stopped \
 	ich777/mycrypto
