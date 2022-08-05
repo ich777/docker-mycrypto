@@ -82,4 +82,4 @@ sleep 2
 
 echo "---Starting MyCrypto---"
 cd ${DATA_DIR}
-${DATA_DIR}/bin/mycrypto
+${DATA_DIR}/bin/mycrypto 2>/dev/null
