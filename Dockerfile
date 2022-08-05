@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.authors="admin@minenet.at"
 
 RUN export TZ=Europe/Rome && \
 	apt-get update && \
-	apt-get -y install --no-install-recommends zip && \
+	apt-get -y install --no-install-recommends zip libpng-dev libasound2 libnss3 libgconf-2-4 libgtk-3-0 jq && \
     sed -i '/    document.title =/c\    document.title = "MyCrypto - noVNC";' /usr/share/novnc/app/ui.js && \
 	rm /usr/share/novnc/app/images/icons/*
 
