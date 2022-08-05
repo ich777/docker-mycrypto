@@ -28,7 +28,7 @@ if [ -z "${CUR_V}" ]; then
   chmod +x ${DATA_DIR}/mycrypto_${LAT_V}.AppImage
   ${DATA_DIR}/mycrypto_${LAT_V}.AppImage --appimage-extract
   mkdir -p ${DATA_DIR}/bin
-  mv $(find ${DATA_DIR}/squashfs-root -type d -name "app")/ ${DATA_DIR}/bin
+  mv $(find ${DATA_DIR}/squashfs-root -type d -name "app")/* ${DATA_DIR}/bin/
   rm -rf ${DATA_DIR}/squashfs-root ${DATA_DIR}/mycrypto_${LAT_V}.AppImage
   touch ${DATA_DIR}/bin/mycryptov_${LAT_V}
 elif [ "${CUR_V}" != "${LAT_V}" ]; then
@@ -44,7 +44,7 @@ elif [ "${CUR_V}" != "${LAT_V}" ]; then
   chmod +x ${DATA_DIR}/mycrypto_${LAT_V}.AppImage
   ${DATA_DIR}/mycrypto_${LAT_V}.AppImage --appimage-extract
   mkdir -p ${DATA_DIR}/bin
-  mv $(find ${DATA_DIR}/squashfs-root -type d -name "app")/ ${DATA_DIR}/bin
+  mv $(find ${DATA_DIR}/squashfs-root -type d -name "app")/* ${DATA_DIR}/bin/
   rm -rf ${DATA_DIR}/squashfs-root ${DATA_DIR}/mycrypto_${LAT_V}.AppImage
   touch ${DATA_DIR}/bin/mycryptov_${LAT_V}
 elif [ "${CUR_V}" == "${LAT_V}" ]; then
